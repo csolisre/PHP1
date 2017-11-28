@@ -1,12 +1,15 @@
 <?php
 class Getal {
-    public function getSom($getal1, $getal2) {
-        $som= $getal1+$getal2;
-        return $som;
-    }  
-    
+public function getValidate($getal1, $getal2) {
+    if($getal1 == $getal2){
+        $val = TRUE;
+    }else{
+        $val = FALSE;
+    }
+    return $val;
 }
 
+}
 ?>
 <!DOCTYPE html>
 <!--
@@ -32,8 +35,18 @@ and open the template in the editor.
         <h2>
 
            <?php
-          $suma= new Getal();
-          print ($suma->getSom($_GET["getal1"], $_GET["getal2"]));
+          $r= rand(0, 10); 
+           $x= new Getal();
+           $valid= $x->getValidate($r, $_GET["getal"]);
+           if($valid === TRUE){
+           print "Same nummer " . $r ;
+           } else {
+           print "Keep trying ";
+           print "Yours ". $_GET["getal"];
+           print "Computer" . $r;
+           }
+           print "<br>";
+           var_dump($valid);
            ?>
            
 

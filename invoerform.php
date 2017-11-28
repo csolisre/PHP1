@@ -15,7 +15,7 @@ and open the template in the editor.
         </style>
     </head>
     <body>
-        <form action="index.php" method="get">
+        <form action="index.php" method="post">
             Kies een getal: <input type="text" name="getal"> <br>
             
             <input type="submit" value="ok">

@@ -1,14 +1,13 @@
 <?php
-class Getal {
-public function getValidate($getal1, $getal2) {
-    if($getal1 == $getal2){
-        $val = TRUE;
-    }else{
-        $val = FALSE;
+class Getal{
+    public function getRandom() {
+      $r = array();
+      for ($i = 0; $i<= 100; $i++){
+          $ran= rand(-50, 50);
+          $r[$i]= $ran;
+      }
+      return $r;
     }
-    return $val;
-}
-
 }
 ?>
 <!DOCTYPE html>
@@ -34,20 +33,11 @@ and open the template in the editor.
         </h1>
         <h2>
 
-           <?php
-          $r= rand(0, 10); 
-           $x= new Getal();
-           $valid= $x->getValidate($r, $_GET["getal"]);
-           if($valid === TRUE){
-           print "Same nummer " . $r ;
-           } else {
-           print "Keep trying ";
-           print "Yours ". $_GET["getal"];
-           print "Computer" . $r;
-           }
-           print "<br>";
-           var_dump($valid);
-           ?>
+          <?php
+          $x=new Getal();
+          print_r($x->getRandom())
+?>
+
            
 
             </h2>

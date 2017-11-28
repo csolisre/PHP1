@@ -19,30 +19,43 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title></title>
+        <style>
+            h5 {
+                color: red;
+            }
+        </style>
     </head>
     <body>
         <h1> 
             <?php
-          $min=20;
-          $max=50;
-          while ($min<=$max){
-              print $min."<br>";
-              $min=$min+2;
-          }
+            $start=0;
+            $som=1;
+            print $start;
+            while($start <20 ){
+               print $som. " ";
+               $anterior=$start;
+               $start=$som;
+               $som=$anterior+$som;
+                
+            }
+            
             ?>
+          
         </h1>
         <h2>
             <?php
-            for ($var=20; $var<=50; $var=$var+1){
-                print $var."<br>";
-            }
-            ?>
+print("Goeiemorgen, ");
+ print($_GET["naam"]);
+ print(".");
+?>
+
+           
         </h2>
         <h6>
-            <?php
-            $oef = new oefening();
-            print ($oef->getLust(20, 50));
-            ?>
+            
         </h6>
+        <h5>
+      
+        </h5>
     </body>
 </html>

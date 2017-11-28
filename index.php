@@ -1,4 +1,13 @@
+<?php
+class Getal {
+    public function getSom($getal1, $getal2) {
+        $som= $getal1+$getal2;
+        return $som;
+    }  
+    
+}
 
+?>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -23,9 +32,8 @@ and open the template in the editor.
         <h2>
 
            <?php
-          print "goeiemorgen, ";
-          print $_GET["naam"];
-          print ".";
+          $suma= new Getal();
+          print ($suma->getSom($_GET["getal1"], $_GET["getal2"]));
            ?>
            
 

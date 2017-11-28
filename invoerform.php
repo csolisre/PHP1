@@ -16,7 +16,8 @@ and open the template in the editor.
     </head>
     <body>
         <form action="index.php" method="get">
-            Vul je naam in: <input type="text" name="naam">
+            Eerste getal: <input type="text" name="getal1"> <br>
+            Tweede getal: <input type="text" name="getal2">
             <input type="submit" value="ok">
         </form>
     </body>

@@ -1,15 +1,4 @@
-<?php
-class Getal{
-    public function getRandom() {
-      $r = array();
-      for ($i = 0; $i<= 100; $i++){
-          $ran= rand(-50, 50);
-          $r[$i]= $ran;
-      }
-      return $r;
-    }
-}
-?>
+
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -33,10 +22,25 @@ and open the template in the editor.
         </h1>
         <h2>
 
-          <?php
-          $x=new Getal();
-          print_r($x->getRandom())
-?>
+         <?php
+        $z= array();
+        $i=0;        
+        $oud = 0;
+        $nieuw = 1;
+        print($oud . " ");
+        
+        while ($nieuw < 30) {
+            
+            $z[$i]=$nieuw;
+            print $z[$i];
+            $vorigOud = $oud;
+            $oud = $nieuw;
+            $nieuw = $vorigOud + $oud;
+            $i=$i++;
+           
+        }
+        
+        ?>
 
            
 

@@ -1,9 +1,27 @@
-
+<?php
+class Getarray {
+    public function fill() {
+        $tab = array();
+        $oud = 0;
+        $nieuw = 1;
+        $tab[0]=$oud;
+        
+        for ($i=1; $i<=30; $i++) {
+            $tab[$i]=$nieuw;
+            $vorigOud = $oud;
+            $oud = $nieuw;
+            $nieuw = $vorigOud + $oud;
+        }
+        
+        return $tab;
+    }
+}
+?>
 <!DOCTYPE html>
 <!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
+xanthate
+xanthate
+xanthate
 -->
 <html>
     <head>
@@ -17,39 +35,24 @@ and open the template in the editor.
     </head>
     <body>
         <h1> 
-           
-          
+<?php
+$res= new Getarray();
+print_r($res->fill());
+?>
+
+
         </h1>
         <h2>
 
-         <?php
-        $z= array();
-        $i=0;        
-        $oud = 0;
-        $nieuw = 1;
-        print($oud . " ");
-        
-        while ($nieuw < 30) {
-            
-            $z[$i]=$nieuw;
-            print $z[$i];
-            $vorigOud = $oud;
-            $oud = $nieuw;
-            $nieuw = $vorigOud + $oud;
-            $i=$i++;
-           
-        }
-        
-        ?>
 
-           
+        </h2>
+        <h6>
 
-            </h2>
-            <h6>
-            
         </h6>
         <h5>
-      
+
+
+            
         </h5>
     </body>
 </html>
